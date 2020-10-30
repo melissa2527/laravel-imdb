@@ -1,7 +1,13 @@
 /node_modules
 /public/hot
 /public/storage
+/public/css
+/public/js
+/public/mix-manifest.json
 /storage/*.key
+/storage/imdb_movies.sql
+/storage/imdb.sql
+/storage/people.sql
 /vendor
 .env
 .env.backup
