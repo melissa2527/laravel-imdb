@@ -8,6 +8,8 @@
 /storage/imdb_movies.sql
 /storage/imdb.sql
 /storage/people.sql
+/storage/posters.sql
+/storage
 /vendor
 .env
 .env.backup

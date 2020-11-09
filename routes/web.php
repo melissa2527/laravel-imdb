@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::view('/', 'welcome');
+
+Route::get('/api/movies/top-rated', 'Api\MovieController@topRated');
+
+Route::get('/api/movies/movie-of-the-week', 'Api\MovieController@movieOfTheWeek');
+
+// if no other route was matched yet... 
+Route::view('/{path?}', 'react-app')->where('path', '.*');
