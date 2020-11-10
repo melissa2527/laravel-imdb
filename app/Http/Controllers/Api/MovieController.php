@@ -47,4 +47,36 @@ class MovieController extends Controller
 
         return compact('movie', 'genres', 'people', 'poster');
     }
+
+    public function detail($id) {
+    
+            $movie = Movie::findOrFail($id);
+    
+            $genres = $movie->genres;
+    
+            $people = $movie->people()
+            ->limit(3)
+            ->where('movie_person.position_id', 254)
+            ->orderBy('movie_person.priority', 'desc')
+            ->get();
+    
+            $poster = $movie->posters()
+            ->where('is_main', 1)
+            ->first();
+
+            return compact('movie', 'genres', 'people', 'poster');
+    }
+
+    public function review($id, Request $request) {
+
+        // $this->validate($request)
+
+        $movie = Movie::findOrFail($id);
+
+        $movie->reviews()->create($request->all());
+
+        return [
+            'status' => 'success'
+        ];
+    }
 }

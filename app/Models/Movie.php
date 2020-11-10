@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Genre;
 use App\Models\Person;
 use App\Models\Poster;
+use App\Models\Review;
 
 class Movie extends Model
 {
@@ -25,5 +26,10 @@ class Movie extends Model
     public function posters()
     {
         return $this->hasMany(Poster::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 }
