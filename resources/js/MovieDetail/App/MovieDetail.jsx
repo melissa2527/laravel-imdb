@@ -4,9 +4,9 @@ export default function MovieDetail({id, movie}) {
         return (
             <div>
             <h1>{movie.movie.name}</h1>
-            {movie.map(item => {
+            {/* {movie.map(item => {
                 <h1>Genres: {item.genres.name}</h1>
-            })}
+            })} */}
             
             </div>
         )

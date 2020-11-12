@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Route, Switch, useParams} from "react-router-dom";
 import MovieReview from "./MovieReview";
 import MovieDetail from "./MovieDetail";
+import Register from "./Register";
 
 export default function App() {
     let {id} = useParams();
@@ -26,6 +27,9 @@ export default function App() {
     }
 
     return (
+        <div>
+            <h1>Register</h1>
+            <Register />
         <Switch>
             <Route path="/movie/:id/review">
                 <MovieReview id={id} movie={movie}/>
@@ -34,5 +38,6 @@ export default function App() {
                 <MovieDetail id={id} movie={movie}/>
             </Route>
         </Switch>
+        </div>
     )
 }

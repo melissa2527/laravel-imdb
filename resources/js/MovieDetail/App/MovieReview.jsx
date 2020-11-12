@@ -54,7 +54,7 @@ function MovieReview({id, movie}) {
                 <label>Rating</label>
                 <input name="rating" type="number" value={rating} onChange={handleRatingChange}/>
 
-                <textarea value={text} onChange={handleTextChange} cols="30" rows="10" />
+                <textarea name="text" value={text} onChange={handleTextChange} cols="30" rows="10" />
                 <button type="submit">Submit Review</button>
             </form>
         </div>
