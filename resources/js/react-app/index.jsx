@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header/Header.jsx';
 import MoviesListShort from './MoviesListShort/MoviesListShort.jsx';
 import MovieOfTheWeek from './MovieOfTheWeek/MovieOfTheWeek.jsx';
+import "../../scss/react-app.scss";
 
 // import './index.scss';
 // import './index.html';

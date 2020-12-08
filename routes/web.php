@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 // Route::view('/', 'welcome');
 
+Route::get('/image-test', function() {
+    return view('image-test');
+});
+
 Route::get('/api/movies/top-rated', 'Api\MovieController@topRated');
 
 Route::get('/api/movies/movie-of-the-week', 'Api\MovieController@movieOfTheWeek');
